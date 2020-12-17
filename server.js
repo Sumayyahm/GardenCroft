@@ -62,7 +62,11 @@ app.post("/stripe/charge", cors(), async (req, res) => {
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/plantsinfo",
-  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+  { useUnifiedTopology: true, 
+    useNewUrlParser: true, 
+    useCreateIndex: true,
+  useFindAndModify: false 
+  }
 );
 
 //Start API server
