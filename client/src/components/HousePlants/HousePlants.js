@@ -14,7 +14,7 @@ function addToCart(item){
 }
 
 useEffect(() => {
-    API.getPlants()
+    API.getHousePlants()
        .then(res => {
            setHousePlants(res.data);
         //    console.log(res.data)
