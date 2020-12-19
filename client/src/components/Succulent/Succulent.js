@@ -14,7 +14,7 @@ function addToCart(item){
 }
 
 useEffect(() => {
-    API.getPlants()
+    API.getSucculents()
        .then(res => {
         setSucculents(res.data);
         //    console.log(res.data)
