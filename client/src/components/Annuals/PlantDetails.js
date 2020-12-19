@@ -1,5 +1,5 @@
 import React, { useContext, useReducer } from "react";
-import { Segment, Button, Icon, Rating, Modal } from "semantic-ui-react";
+import { Segment, Button, Icon, Rating, Modal, Popup } from "semantic-ui-react";
 import { CartContext } from '../../CartContext';
 import { Link } from 'react-router-dom';
 
@@ -27,19 +27,14 @@ function PlantDetails(props) {
 
  
   const [cart, setCart] = useContext(CartContext);
-  // const totalPrice = cart.reduce((total, current) => total + current.price, 0);
+  
   
   //Function to add to cart
   function handleOnClick() {
     dispatch({ type: 'OPEN_MODAL', dimmer: 'blurring' });
     console.log("Inside add to cart function");
     props.addToCart()
-    console.log(cart);
-  }
-
-  function viewCart() {
-    dispatch({ type: 'CLOSE_MODAL' });
-    <Link to="/cart"></Link>
+    // console.log(cart);
   }
 
 
@@ -60,12 +55,19 @@ function PlantDetails(props) {
             <Icon name='add to cart' size='large' />
             Add to Cart
           </Button>
-          {/* <Button color='red'><Icon name='heart' size='large' />Add to Wish List</Button> */}
+
+           <Button 
+          color='red'
+          onClick={props.addToWishList}
+          >
+            <Icon name='heart' size='large' />
+            Add to Wish List
+            </Button>
+
           <br></br><br></br>
           <Rating maxRating={5} icon='star' size='large' />
         </Segment>
        
-        {/* Add to cart Modal */}
         <Modal
           dimmer={dimmer}
           open={open}
@@ -87,6 +89,7 @@ function PlantDetails(props) {
             </Link>
           </Modal.Actions>
         </Modal>
+
       </div>
     )
 }
