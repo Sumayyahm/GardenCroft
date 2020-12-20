@@ -51,15 +51,19 @@ router.get("/form",() => {
 });
 
 router.post("/form", (req,res) => {
-    console.log("I am inside post route")
+    console.log("I am inside post route");
     let data= req.body;
     console.log(data);
     let smtpTransport = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
+        secure: true,
         auth: {
             user: process.env.EMAIL,
             pass: process.env.GMAIL_PASS
+        },
+        tls: {
+          rejectUnauthorized: false
         }
     });
 
