@@ -7,10 +7,41 @@ import API from '../../utils/API'
 function Succulents() {
 
 const [succulents, setSucculents] = useState([])
-const [cart, setCart] = useContext(CartContext)
+const [cart, setCart] = useContext(CartContext);
+var wishList = [];
 
 function addToCart(item){
     setCart(currentCart => [...currentCart, item ]);
+}
+
+function addToWishList(item) {
+    wishList = JSON.parse(localStorage.getItem("wishList"));
+    if(wishList.length> 0)
+    {
+        var myWishListObj = {
+            image: item.imageurl,
+            name: item.plant_name,
+            type: item.plant_type
+        }
+    
+        wishList.push(myWishListObj);
+        myWishListObj= "";
+        localStorage.setItem("wishList", JSON.stringify(wishList));
+    }
+    else {
+        // wishList = [];
+        var myWishListObj = {
+            image: item.imageurl,
+            name: item.plant_name
+        }
+    
+        wishList.push(myWishListObj);
+       
+        myWishListObj= "";
+        localStorage.setItem("wishList", JSON.stringify(wishList));
+    }
+    
+    console.log(wishList);
 }
 
 useEffect(() => {
@@ -39,6 +70,7 @@ useEffect(() => {
                 bloom_time= {plant.bloom_time}
                 price={plant.price}
                 addToCart={() => addToCart(plant)}
+                addToWishList={() => addToWishList(plant)}
                 />
             );
         })}
