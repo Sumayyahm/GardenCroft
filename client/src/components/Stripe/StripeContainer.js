@@ -12,12 +12,15 @@ const stripeTestPromise = loadStripe(PUBLIC_KEY);
 
 const Stripe = () => {
   return (
+    <div>
+    <br></br><br></br><br></br>
     <Container>
     <Elements stripe={stripeTestPromise}>
-      <br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br>
       <CheckoutForm />
     </Elements>
     </Container>
+    </div>
   );
 };
 

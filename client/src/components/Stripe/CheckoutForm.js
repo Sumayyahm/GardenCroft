@@ -1,10 +1,57 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from 'axios';
+import { Form, Input, Button, Header, Modal } from 'semantic-ui-react';
+import { CartContext } from "../../CartContext";
+
+function exampleReducer(state, action) {
+  switch (action.type) {
+    case 'close':
+      return { open: false }
+    case 'open':
+      return { open: true, size: action.size }
+    default:
+      throw new Error('Unsupported action...')
+  }
+}
 
 export const CheckoutForm = () => {
+  const [state, dispatch] = React.useReducer(exampleReducer, {
+    open: false,
+    size: undefined,
+  })
+  const { open, size } = state
+
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
   const stripe = useStripe();
   const elements = useElements();
+  const [cart, setCart] = useContext(CartContext);
+  const [amount, setAmount] = useState(0);
+ 
+  
+  function calculateTotal() {
+    var total = 0;
+  for( let i=0; i<cart.length; i++) 
+  {
+    total = total + cart[i].price
+  }
+  return ((total.toFixed(2))*100)
+  }
+
+ const handleFirstName = (e) => {
+    setFirstName(e.target.value)
+  }
+
+ const handleLastName = (e) => {
+    setLastName(e.target.value)
+  }
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value)
+  }
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,30 +64,94 @@ export const CheckoutForm = () => {
       console.log("Stripe 23 | token generated!", paymentMethod);
       try {
         const { id } = paymentMethod;
-        const response = await axios.post(
-          "http://localhost:8080/stripe/charge",
+        const response = await axios.post("/api/stripe/charge",
           {
-            amount: 999,
-            id: id,
-          }
-        );
-
+            id,
+            amount: amount,
+            receipt_email: email
+          })
         console.log("Stripe 35 | data", response.data.success);
         if (response.data.success) {
           console.log("CheckoutForm.js 25 | payment successful!");
         }
-      } catch (error) {
+      } 
+      catch (error) {
         console.log("CheckoutForm.js 28 | ", error);
       }
     } else {
       console.log(error.message);
     }
+    resetForm();
   };
 
+  function resetForm() {
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setAmount(0);
+    setCart([]);
+    dispatch({ type: 'open', size: 'mini' });
+  }
+
+  useEffect(() => {
+    setAmount(calculateTotal())
+  }, amount)
+
+
+
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
+    <div>
+      <Header>Your Total Amount is {amount/100} </Header>
+    <Form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
+      <Form.Group widths='equal'>
+      <Form.Field
+        className= 'text-area'
+        id='form-input-control-first-name'
+        control={Input}
+        label='First name'
+        placeholder='First name'
+        value={firstName}
+        onChange={handleFirstName}
+      />
+      <Form.Field
+        className= 'text-area'
+        id='form-input-control-last-name'
+        control={Input}
+        label='Last name'
+        placeholder='Last name'
+        value={lastName}
+        onChange={handleLastName}
+      />
+    </Form.Group>
+    <Form.Field
+      id='form-input-control-error-email'
+      control={Input}
+      label='Email'
+      placeholder='example@myexample.com'
+      value={email}
+      onChange={handleEmail}
+    />
       <CardElement />
-      <button>Pay</button>
-    </form>
+      <br></br><br></br>
+      <Button color='green'>Pay</Button>
+    </Form>
+
+    <Modal
+        size={size}
+        open={open}
+        onClose={() => dispatch({ type: 'close' })}
+      >
+        <Modal.Header>Thank you for shopping with Garden Croft!</Modal.Header>
+        <Modal.Content>
+          <p>You will receive a confirmation email shortly.</p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button positive onClick={() => dispatch({ type: 'close' })}>
+            OK
+          </Button>
+        </Modal.Actions>
+      </Modal>
+   
+    </div>
   );
 };
