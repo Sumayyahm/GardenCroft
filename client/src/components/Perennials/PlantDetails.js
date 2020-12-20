@@ -27,7 +27,7 @@ function PlantDetails(props) {
 
  
   const [cart, setCart] = useContext(CartContext);
-  // const totalPrice = cart.reduce((total, current) => total + current.price, 0);
+ 
   
   //Function to add to cart
   function handleOnClick() {
@@ -60,7 +60,15 @@ function PlantDetails(props) {
             <Icon name='add to cart' size='large' />
             Add to Cart
           </Button>
-          {/* <Button color='red'><Icon name='heart' size='large' />Add to Wish List</Button> */}
+         
+          <Button 
+          color='red'
+          onClick={props.addToWishList}
+          >
+            <Icon name='heart' size='large' />
+            Add to Wish List
+            </Button>
+            
           <br></br><br></br>
           <Rating maxRating={5} icon='star' size='large' />
         </Segment>
