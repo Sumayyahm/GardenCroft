@@ -63,6 +63,8 @@ export default class Contact extends Component {
       this.setState({
         sent: true,
       }, this.resetForm())
+      console.log(data)
+     console.log("inside post route")
       alert("Message successfully sent!");
     }).catch(() => {
       console.log("Error!");
