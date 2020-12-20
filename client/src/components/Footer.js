@@ -2,9 +2,8 @@ import React from "react";
 import { Sticky } from 'semantic-ui-react';
 
 const styles ={
-    fontFamily: 'Cambria',
-    color: 'dimgray',
-    backgroundColor: 'whitesmoke',
+    fontFamily: 'Palatino, serif',
+    backgroundColor: 'mintcream',
     paddingTop: '12px',
     textAlign: 'center',
     color: 'green'
