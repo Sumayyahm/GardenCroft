@@ -8,7 +8,7 @@ function Roses() {
 
 const [roses, setRoses] = useState([])
 const [cart, setCart] = useContext(CartContext);
-var wishList = [];
+var wishList;
 
 function addToCart(item){
     setCart(currentCart => [...currentCart, item ]);
@@ -16,7 +16,7 @@ function addToCart(item){
 
 function addToWishList(item) {
     wishList = JSON.parse(localStorage.getItem("wishList"));
-    if(wishList.length> 0)
+    if(wishList !== null)
     {
         var myWishListObj = {
             image: item.imageurl,
@@ -29,7 +29,7 @@ function addToWishList(item) {
         localStorage.setItem("wishList", JSON.stringify(wishList));
     }
     else {
-        // wishList = [];
+        wishList = [];
         var myWishListObj = {
             image: item.imageurl,
             name: item.plant_name
