@@ -195,7 +195,7 @@ mongoose.connect(
 
 {
    plant_name: "Belinda’s Dream",
-   imageurl: "https://i.pinimg.com/originals/50/63/0c/50630cbb5d004a055656f69dd6abd914.jpg",
+   imageurl: "https://smhttp-ssl-80650.nexcesscdn.net/pub/media/catalog/product/cache/0f831c1845fc143d00d6d1ebc49f446a/b/e/belindas-dream.jpg",
    description: "Belinda’s Dream is disease tolerant and has gorgeous flowers. Used as a specimen plant, a hedge or even in a large pot, this rose has the impact and beauty of a modern hybrid tea, but is much more disease and soil tolerant. The large, very double pink blossoms come in large clusters from spring until frost.",
    size: "Height: 5 feet tall. Width:5 feet",
    exposure:"Full sun, good air circulation",
@@ -220,7 +220,7 @@ mongoose.connect(
 
 {
    plant_name: "Red Cascade",
-   imageurl: "https://www.trees.com/sites/default/files/inline-images/types-of-roses/blaze-climbing-rose.jpg",
+   imageurl: "https://2.bp.blogspot.com/-xx_B-vLZ0As/Tgn283zyjnI/AAAAAAAAAos/idCvIioDJH8/s1600/comp+Red+Cascade+comp+062711+%252827%2529.jpg",
    description: "This is a rambling rose that can be used as a short climber. The creamy white blossoms glow in the nighttime garden",
    size: "Height: 1-2 feet",
    exposure:"Full sun.",
@@ -232,7 +232,7 @@ mongoose.connect(
 
 {
    plant_name: "Caldwell Pink",
-   imageurl: "https://www.ces.ncsu.edu/wp-content/uploads/2014/11/Camellia-Harvard.jpg",
+   imageurl: "https://redneckrosarian.files.wordpress.com/2011/09/img_20110611_101715.jpg",
    description: "This everblooming rose is one of the most popular roses with landscape designers. Its double, lilac-pink flowers form clusters that can be seen at a distance, and the compact bush fills out nicely with a minimum of pruning and maintenance.",
    size: "Height: 4 feet. Width:4 feet",
    exposure:"Full sun, good air circulation",
@@ -256,7 +256,7 @@ mongoose.connect(
 
 {
    plant_name: "Knock Out",
-   imageurl: "https://cdn.shopify.com/s/files/1/0373/4703/3221/products/rose-knockout-double-red-3g-147908_800x.jpg?v=1588419822",
+   imageurl: "https://images.squarespace-cdn.com/content/v1/59e51767ccc5c5f1c5762e04/1510779383349-5K0PHV7I2E4B1ABHRFQH/ke17ZwdGBToddI8pDm48kEAwEK07li2CqplQOpajpjV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0rQeu_A0VlcGJEiWdfSJ_zWClRb03bxeWcSdIukqz9GKJFOzN6izfXKHWEkYAHQlpA/PinkKnockOut5.jpg",
    description: "This shrub rose has stunning flower power that provides an almost non-stop abundance of cherry red, single blossoms. Black spot resistant, drought tolerant and self-cleaning, this rose suits every garden and every lifestyle. ",
    size: "Height: 6 feet. Width:6 feet",
    exposure:"Full sun, dappled shade in afternoons",
@@ -269,7 +269,7 @@ mongoose.connect(
 
 {
    plant_name: "Mutabilis",
-   imageurl: "https://i.pinimg.com/originals/d0/0b/a4/d00ba46040705c4025d12bade8fdc746.jpg",
+   imageurl: "https://xeraplants.com/wp-content/uploads/2017/11/Rosa-x-odorata-Mutabilis.png",
    description: "Amazing medium sized single blossoms that pass through three distinct color phases beginning with yellow, changing to pink, and finally to crimson. Mutabilis is also known as “The Butterfly Rose” because its blossoms look like brightly colored butterflies that have landed on the bush. ",
    size: "Height: 6 feet. Width:6 feet",
    exposure:"Full sun. Good air circulation.",
@@ -281,7 +281,7 @@ mongoose.connect(
 
 {
    plant_name: "Cecile Brunner",
-   imageurl: "https://1.bp.blogspot.com/_KS8tI-ybaTc/TCS4wnvQIRI/AAAAAAAACz4/toOTo05nQ80/s800/IMG_0001_18.jpg",
+   imageurl: "https://img.crocdn.co.uk/images/products2/pl/00/00/00/11/pl0000001169.jpg?width=940&height=940",
    description: "Perfectly shaped, little pink buds earned 'Cecile Brunner' its nickname. Blossoms are a soft silvery pink and look like a hybrid tea in miniature. They appear in clusters and have a sweet fragrance.",
    size: "Height: 4 feet. Width:3 feet",
    exposure:"Full sun, dappled shade in afternoons",
@@ -289,6 +289,176 @@ mongoose.connect(
    care: "Keep moist until established (usually requires one month to establish). Average water needs during growing season.",
    bloom_time: "Mid spring through Summer",
    price: 14.99
+},
+
+{
+   plant_name: "Monstera",
+   imageurl: "https://nouveauraw.com/wp-content/uploads/2020/01/mature-Monstera-Plant-800.png",
+   description: "Monstera is famous for its beautiful broad green leaves with natural leaf-holes, called fenestrations, which have led to the rise of its nickname, ‘swiss cheese plant’.",
+   size: "26'-36' tall, Width- 20-26'wide",
+   exposure:"Bright indirect to full sun",
+   plant_type: "House Plant",
+   care: "Avoid strong, direct sunlight because it may burn the leaves.Water your Monstera when the top 50-75% of the soil is dry.For best results, feed your plant once a month throughout the spring and summer.",
+   bloom_time: "N/A",
+   price: 55
+},
+
+
+{
+   plant_name: "Snake Plant",
+   imageurl: "https://nouveauraw.com/wp-content/uploads/2020/02/Snake-Plant-Sansevieria-Cylindrica800.png",
+   description: "Snake plant have stiff, upright, sword-like leaves that may be banded or edged in gray, silver, or gold. Snake plant's architectural nature makes it a natural choice for modern and contemporary interior designs. It's one of the best houseplants around.If you're looking for an easy-care houseplant, you can't do much better than snake plant",
+   size: "Height- 8' to 22' tall",
+   exposure:"Bright Sunlight",
+   plant_type: "House Plant",
+   care: "Water your Snake Plants every 2-8 weeks.Just be sure to keep Snake Plants out of the direct, hot sun (west or south window) because they’ll burn in a heartbeat",
+   bloom_time: "N/A",
+   price: 10.72
+},
+
+{
+   plant_name: "Pothos",
+   imageurl: "https://i.pinimg.com/originals/b4/40/0c/b4400c2c7309cca921bf33b768103b47.jpg",
+   description: "Pothos is arguably the easiest of all houseplants to grow.This trailing vine has pointed, heart-shaped green leaves, sometimes variegated with white, yellow, or pale green.",
+   size: "Height: 6 to 10 feet",
+   exposure:"Shade to part shade outdoors, bright indirect light indoors",
+   plant_type: "House Plant",
+   care: "Pothos aren’t heavy feeders, but since there are no nutrients in most potting soils, feed monthly to bi-monthly with any balanced houseplant fertilizer.Indoors, pothos prefers bright but indirect light.Variegated plants sometimes lose their leaf pattern and revert to all-green plants if they don't get enough light; moving them to brighter conditions usually restores the variegation. Suddenly paler-looking leaves mean the plant is getting too much sun.",
+   bloom_time: "N/A",
+   price: 9.99
+},
+
+{
+   plant_name: "Tradescantia",
+   imageurl: "https://i.pinimg.com/originals/5c/11/9f/5c119f8c6057038d12ffa088b0f164b6.jpg",
+   description: "The Tradescantia family is large, with several colorful varieties. They grow best in a hanging basket, or where their long stems have room to drape. Leaf patterns and colors depend on the variety, but many have white and green striped leaves with purple undersides. A few are striped with purple or pink.",
+   size: "Height: 6' to 9' with 12-14' spread",
+   exposure:"Bright, indirect sun.",
+   plant_type: "House Plant",
+   care: "Keep your Tradescantia away from overly-bright light, and allow the soil to dry out a bit between waterings.",
+   bloom_time: "N/A",
+   price: 39.99
+},
+
+{
+   plant_name: "Geranium",
+   imageurl: "https://meansnursery.com/wp-content/uploads/2018/05/geranium-basket.jpg",
+   description: "Geranium plant leaves are broadly circular in form. The flowers have five petals and are coloured white, pink, purple or blue, often with distinctive veining.",
+   size: "Height: 3 feet Width: 3 feet",
+   exposure:"Bright to intense light; 60-75°F",
+   plant_type: "House Plant",
+   care: "Locate your geraniums in an area with at least six to eight hours of sunlight. Since these plants must be protected from cold, wait until the threat of frost has passed before planting.",
+   bloom_time: "N/A",
+   price: 9.99
+},
+
+{
+   plant_name: "Jasmine",
+   imageurl: "https://mulchmasters.com/product-images/star-jasmine.jpg",
+   description: "The plant produces charming little star-shaped white blooms that often have pink highlights on the petals. In addition to looking beautiful, the Jasmine flower also has a pleasant sweet smell that is calming to your body.",
+   size: "Height: 1.6 to 9.8 feet tall",
+   exposure:"Bright Sunlight",
+   plant_type: "House Plant",
+   care: " Make sure that it is getting sunlight for up to four hours a day.Jasmine plants need a lot of water, especially when they are in bloom. It is best to always keep the soil slightly moist. The plants should be watered on a weekly basis, but if the soil becomes dry before that, water the plant early.",
+   bloom_time: "Spring until fall",
+   price: 16.99
+},
+
+{
+   plant_name: "African Violet",
+   imageurl: "http://www.desktopimages.org/pictures/2013/1028/12/purple-african-violets-wallpaper-44114.jpg",
+   description: " African violets instantly add color to any room.They bloom several times a year with little effort from you.  They come in hundreds of varieties, some with variegated foliage or ruffled or white-edged blooms.",
+   size: "Height: 8' , Width:16'",
+   exposure:"Medium to bright light",
+   plant_type: "House Plant",
+   care: "African violets prefer the same temperatures most people find comfortable: between 70-80°F during the day, and around 65–70°F at night. Water from below. Fill the saucer using room temperature water. Let sit for about an hour and then pour excess water out. Allow the plant to dry out between waterings.",
+   bloom_time: "Year around",
+   price: 19.99
+},
+
+{
+   plant_name: "Vriesia Red Chestnut",
+   imageurl: "https://www.mashtalegypt.com/wp-content/uploads/2019/10/vriesea-vermelha.jpg",
+   description: "The flaming sword houseplant, Vriesea splendens, is one of the most common bromeliads used for indoor decoration.The flaming sword houseplant is commonly named for its red bracts that appear when the plant is three to five years old",
+   size: "Height: 12'. Width:15'",
+   exposure:"Shade/Part Shade",
+   plant_type: "House Plant",
+   care: "Good light but no direct sunlight is what’s needed.Avoid setting it near heat sources such as radiators, because moisture is what this tropical plant needs most.Keep the soil mix barely moist and check that water drains properl",
+   bloom_time: "End of Winter or Summer",
+   price: 25
+},
+
+{
+   plant_name: "Crinkle-Leaf Plant",
+   imageurl: "https://worldofsucculents.com/wp-content/uploads/2013/08/Adromischus-cristatus3.jpg",
+   description: "This small plant has triangle-shaped leaves covered in tiny hairs. The end of the leaf forms a crinkle. It is easy to grow, making it perfect for beginners.It grows a tall, green stalk from which a white flower blooms.",
+   size: "Height: 18', Width: 24'",
+   exposure:"Full sun to partial shade",
+   plant_type: "Succulent",
+   care: "Crinkle Leaf Plant” tends to need a bit less water than other succulents. It’s best to use the “soak and dry” method, and allow the soil to dry out completely between waterings. ",
+   bloom_time: "N/A.",
+   price: 4.49
+
+},
+
+
+{
+   plant_name: "Sunrise",
+   imageurl: "https://i.pinimg.com/originals/bb/83/38/bb833823edc3087957ca4d61e0f6436f.jpg",
+   description: "This variegated succulent has pink and green leaves. As the rosettes grow, they can creep outwards as a mat in rock gardens, or in container gardens it trails over the edge, making it great “filler or spiller.",
+   size: "Height: 6' . Width:6' ",
+   exposure:"Partial sun to partial shade",
+   plant_type: "Succulent",
+   care: "Sunrise’ has typical watering needs for a succulent, but it is sensitive to over-watering. It’s best to use the “soak and dry” method, and allow the soil to dry out completely between waterings.Plant in an area of your garden that gets filtered sunlight or plenty of shade. If planting indoors, place in a room that gets a filtered light.",
+   bloom_time: "N/A.",
+   price: 8.99
+},
+
+{
+   plant_name: "Aloe perfoliata",
+   imageurl: "https://thetilth.com/wp-content/uploads/2019/11/Aloe-perfoliata-Mitre-Aloe.jpg",
+   description: "Aloe perfoliata “Mitre Aloe” gets its name from the mitre-shape the leaves make when they curve upwards towards the center. The clusters spread outward instead of upwards as it grows.Depending on where it is grown, “Mitre Aloe” can have many different appearances. When it is stressed in full sun, the leaves can turn red.",
+   size: "Height: 12'. Width:24' ",
+   exposure:"Full sun to partial shade",
+   plant_type: "Succulent",
+   care: "Mitre Aloe” has typical watering needs for a succulent. It’s best to use the “soak and dry” method, and allow the soil to dry out completely between waterings.",
+   bloom_time: "N/A.",
+   price: 4.49
+},
+
+{
+   plant_name: "Chocolate Drop",
+   imageurl: "https://img.particlenews.com/img/id/3jlRhz_0P1m3XLj00?type=thumbnail_800x600",
+   description: "This grey-green succulent has flat oval leaves with purple spots. It is a great succulent for beginners, and does well indoors with bright light. Watch for white, tube-shaped flowers in the Summer, although it rarely blooms indoors.",
+   size: "Height: 8'. Width:8' ",
+   exposure:"Bright indoor light",
+   plant_type: "Succulent",
+   care: "Adromischus maculatus ‘Calico Hearts’ is sensitive to over-watering. It’s best to use the “soak and dry” method, and allow the soil to dry out completely between waterings.Plant in an area of your garden that gets 6 hours of sunlight a day. If planting indoors, place in a room that gets a lot of sunlight, such as near a southern-facing window.",
+   bloom_time: "N/A.",
+   price: 7.49
+},
+
+{
+   plant_name: "Salad Bowl",
+   imageurl: "https://succulentalley.b-cdn.net/wp-content/uploads/2020/07/Aeonium-lancerottense-alloe..jpg",
+   description: "This bright green succulent has a large rosette. The tips of its leaves blush red when happily stressed. Each plant grows two to three rosettes. It is monocarpic, meaning it will die after blooming. Watch for off-white flowers in the spring.",
+   size: "Height: 12'. Width:36' ",
+   exposure:"Bright indoor light",
+   plant_type: "Succulent",
+   care: "It’s best to use the “soak and dry” method, and allow the soil to dry out completely between waterings.Plant in an area of your garden that gets 6 hours of sunlight a day. If planting indoors, place in a room that gets a lot of sunlight, such as near a southern-facing window.",
+   price: 9.49
+},
+
+{
+   plant_name: "Ice Plant",
+   imageurl: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/CgQAAOSw901dIzf-/$_3.JPG",
+   description: "This compact, fast-growing succulent has a deceptive name. Although the green-leaved plant is known as “Ice Plant,” it is not cold hardy. It does well indoors and is great for beginners. The thick blue-green leaves stack opposite each other as they grow up the stem. It has yellow flowers that look similar to daisies that bloom in the Spring.",
+   size: "Height: 8'. Width:12' ",
+   exposure:"Full to Partial Sun.",
+   plant_type: "Succulent",
+   care: "Ice Plant is not cold hardy, so if you live in a zone that gets colder than 30° F (-1.1° C), it’s best to plant this succulent in a container that can be brought indoors.",
+   bloom_time: "N/A.",
+   price: 7.49
 }
   ];
 
