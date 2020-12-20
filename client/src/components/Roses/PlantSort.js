@@ -39,6 +39,7 @@ const style = {
       price={props.price} 
       plant_type={props.plant_type}
       addToCart={props.addToCart}
+      addToWishList={props.addToWishList}
       />
     </Grid.Column>
     <br></br><br></br>
