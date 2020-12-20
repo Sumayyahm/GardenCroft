@@ -8,7 +8,7 @@ function Annuals() {
 
 const [plants, setPlants] = useState([])
 const [cart, setCart] = useContext(CartContext);
-var wishList;
+var wishList = [];
 
 
 function addToCart(item){
@@ -17,7 +17,7 @@ function addToCart(item){
 
 function addToWishList(item) {
     wishList = JSON.parse(localStorage.getItem("wishList"));
-    if(wishList!== null)
+    if(wishList.length> 0)
     {
         var myWishListObj = {
             image: item.imageurl,
@@ -30,7 +30,7 @@ function addToWishList(item) {
         localStorage.setItem("wishList", JSON.stringify(wishList));
     }
     else {
-        wishList = [];
+        // wishList = [];
         var myWishListObj = {
             image: item.imageurl,
             name: item.plant_name
@@ -40,7 +40,6 @@ function addToWishList(item) {
        
         myWishListObj= "";
         localStorage.setItem("wishList", JSON.stringify(wishList));
-
     }
     
     console.log(wishList);
