@@ -1,5 +1,5 @@
 import React, { useContext, useReducer } from "react";
-import { Segment, Button, Icon, Rating, Modal, Popup } from "semantic-ui-react";
+import { Segment, Button, Icon, Rating, Modal } from "semantic-ui-react";
 import { CartContext } from '../../CartContext';
 import { Link } from 'react-router-dom';
 
