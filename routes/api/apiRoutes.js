@@ -56,8 +56,8 @@ router.post("/form", (req,res) => {
     console.log(data);
     let smtpTransport = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
+        port: 587,
+        secure: false,
         auth: {
             user: process.env.EMAIL,
             pass: process.env.GMAIL_PASS
