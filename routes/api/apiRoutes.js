@@ -61,9 +61,6 @@ router.post("/form", (req,res) => {
         auth: {
             user: process.env.EMAIL,
             pass: process.env.GMAIL_PASS
-        },
-        tls: {
-          rejectUnauthorized: false
         }
     });
 
