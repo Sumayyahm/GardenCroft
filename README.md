@@ -31,6 +31,10 @@ Go to the deployed heroku link and shop for plants or add plants to wishlist
 
 ![image](https://user-images.githubusercontent.com/66535567/102938499-0ec9d180-4472-11eb-8c85-7a43e94d0ada.png)
 
+# Walkthrough Video
+
+https://drive.google.com/file/d/18FwoCcpgHCIUyZpSyex-2jiAO03yCtQu/view
+
 # License
 MIT
 
