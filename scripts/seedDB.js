@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/plantsinfo",
+   process.env.MONGODB_URI || "mongodb://localhost/plantsinfo",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
@@ -195,7 +195,7 @@ mongoose.connect(
 
 {
    plant_name: "Belinda’s Dream",
-   imageurl: "https://smhttp-ssl-80650.nexcesscdn.net/pub/media/catalog/product/cache/0f831c1845fc143d00d6d1ebc49f446a/b/e/belindas-dream.jpg",
+   imageurl: "https://s3.amazonaws.com/cdn.edmundsroses.com/images/popup/24316.jpg",
    description: "Belinda’s Dream is disease tolerant and has gorgeous flowers. Used as a specimen plant, a hedge or even in a large pot, this rose has the impact and beauty of a modern hybrid tea, but is much more disease and soil tolerant. The large, very double pink blossoms come in large clusters from spring until frost.",
    size: "Height: 5 feet tall. Width:5 feet",
    exposure:"Full sun, good air circulation",
