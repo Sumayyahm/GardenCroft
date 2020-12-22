@@ -25,6 +25,10 @@ export const CheckoutForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const[address, setAddress] = useState('');
+  const[city, setCity]= useState('');
+  const[states, setStates] = useState('');
+  const[zip, setZip] = useState('');
   const stripe = useStripe();
   const elements = useElements();
   const [cart, setCart] = useContext(CartContext);
@@ -52,6 +56,21 @@ export const CheckoutForm = () => {
     setEmail(e.target.value)
   }
 
+  const handleAddress = (e) => {
+    setAddress(e.target.value)
+  }
+
+  const handleCity = (e) => {
+    setCity(e.target.value)
+  }
+
+  const handleState = (e) => {
+    setStates(e.target.value)
+  }
+
+  const handleZIP = (e) => {
+    setZip(e.target.value)
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -88,6 +107,10 @@ export const CheckoutForm = () => {
     setFirstName('');
     setLastName('');
     setEmail('');
+    setAddress('');
+    setCity('');
+    setStates('');
+    setZip('');
     setAmount(0);
     setCart([]);
     dispatch({ type: 'open', size: 'mini' });
@@ -105,30 +128,56 @@ export const CheckoutForm = () => {
       <Header style={{fontFamily:'Palatino, serif', fontSize:'23px'}}>Your Total Amount is {amount/100} </Header>
     <Form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
       <Form.Group widths='equal'>
-      <Form.Field
-        className= 'text-area'
-        id='form-input-control-first-name'
-        value={firstName}
-        onChange={handleFirstName}>
-          <label  style={{fontFamily:'Palatino, serif'}}>First Name</label>
-          <input placeholder='First Name'/>
-        </Form.Field>
-      <Form.Field
-        className= 'text-area'
-        id='form-input-control-last-name'
-        value={lastName}
-        onChange={handleLastName}>
-          <label  style={{fontFamily:'Palatino, serif'}}>Last Name</label>
-          <input placeholder='Last Name'/>
-        </Form.Field>
-    </Form.Group>
+        <Form.Field
+          className= 'text-area'
+          id='form-input-control-first-name'
+          control={Input}
+          placeholder='First name'
+          value={firstName}
+          onChange={handleFirstName} />
+          
+        <Form.Field
+          className= 'text-area'
+          id='form-input-control-last-name'
+          control={Input}
+          placeholder='Last name'
+          value={lastName}
+          onChange={handleLastName} />
+      </Form.Group>
+
     <Form.Field
       id='form-input-control-error-email'
+      control={Input}
+      placeholder='Email'
       value={email}
-      onChange={handleEmail}>
-        <label  style={{fontFamily:'Palatino, serif'}}>Email</label>
-        <input placeholder='example@myexample.com'/>
-        </Form.Field>
+      onChange={handleEmail} />
+
+    <Form.Field
+      control={Input}
+      placeholder='Address'
+      value={address}
+      onChange={handleAddress} />
+
+    <Form.Field
+      control={Input}
+      placeholder='City'
+      value={city}
+      onChange={handleCity} />
+
+    <Form.Group widths='equal'>
+        <Form.Field
+          control={Input}
+          placeholder='State'
+          value={states}
+          onChange={handleState} />
+
+        <Form.Field
+          control={Input}
+          placeholder='ZIP'
+          value={zip}
+          onChange={handleZIP} />
+    </Form.Group>
+  
       <CardElement />
       <br></br><br></br>
       <Button color='black'>Pay</Button>

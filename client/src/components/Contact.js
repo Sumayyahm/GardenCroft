@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Icon, TextArea, Button, Container } from 'semantic-ui-react';
+import { Form, Input, TextArea, Button, Container } from 'semantic-ui-react';
 import axios from 'axios';
 
 
@@ -97,40 +97,40 @@ return (
     <Form.Group widths='equal'>
       <Form.Field
         id='form-input-control-first-name'
+        control={Input}
+        placeholder='First name'
         value={this.state.firstName}
-        onChange={this.handleFirstName}>
-          <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>First Name</label><br/>
-          <input placeholder='First Name'></input>
-        </Form.Field>
+        onChange={this.handleFirstName} />
       
       <Form.Field
         id='form-input-control-last-name'
+        control={Input}
+        placeholder='Last name'
         value={this.state.lastName}
-        onChange={this.handleLastName}>
-        <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>Last Name</label><br/>
-        <input placeholder='Last Name'></input>
-      </Form.Field> 
+        onChange={this.handleLastName} />
     </Form.Group>
-    <Form.Field
-      id='form-textarea-control-opinion'
-      control={TextArea}
-      placeholder='Message'
-      value={this.state.message}
-      onChange={this.handleMessage}/>
-    <Form.Field
-      id='form-input-control-error-email'
-      value={this.state.email}
-      onChange={this.handleEmail}>
-        <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>Email</label><br/>
-        <input placeholder='example@myexample.com'></input>
-      </Form.Field>
+
+      <Form.Field
+        id='form-textarea-control-opinion'
+        control={TextArea}
+        placeholder='Message'
+        value={this.state.message}
+        onChange={this.handleMessage}/>
+
+      <Form.Field
+        id='form-input-control-error-email'
+        control={Input}
+        placeholder='Email'
+        value={this.state.email}
+        onChange={this.handleEmail} />
+        
      <Form.Field
       className= 'text-area'
+      control={Input}
+      placeholder='Phone Number'
       value={this.state.phoneNumber}
-      onChange={this.handlePhoneNumber}>
-        <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>Phone Number</label><br/>
-        <input placeholder='+1 XXX XXX XXXX'></input>
-      </Form.Field>
+      onChange={this.handlePhoneNumber} />
+        
       <div>
     <Button
       id='form-button-control-public'
