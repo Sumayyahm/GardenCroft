@@ -11,7 +11,7 @@ import HousePlants from './components/HousePlants/HousePlants'
 import Footer from "./components/Footer";
 import { CartProvider } from "./CartContext";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Contact from './components/Contact/Contact';
+import Contact from './components/Contact';
 import Cart from './components/CartPage';
 import Stripe from './components/Stripe/StripeContainer';
 

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Form, Input, TextArea, Button, Container, Image } from 'semantic-ui-react';
+import { Form, Icon, TextArea, Button, Container } from 'semantic-ui-react';
 import axios from 'axios';
-import greencroft from "../../images/gclogo.png";
-import './index.css'
+
 
 
 
@@ -89,60 +88,54 @@ export default class Contact extends Component {
 render() {
 return (
   <div>
-    <br></br>
-    <Image src={greencroft} style={{display: 'block', marginLeft:'auto', marginRight:'auto'}} />
-    <br></br>
+    <br></br><br></br>
   <Container className='container'>
+    <h1 style={{color:'white', fontSize:'37px', textAlign:'center', fontFamily:'Palatino, serif'}}>Get in touch with us!</h1>
+    <h4 style={{color:'white', textAlign:'center', fontFamily:'Palatino, serif'}}>12567, Windy Park, Austin TX 79434</h4>
+    
   <Form onSubmit={this.formSubmit}>
     <Form.Group widths='equal'>
       <Form.Field
-        className= 'text-area'
         id='form-input-control-first-name'
-        control={Input}
-        label='First name'
-        placeholder='First name'
         value={this.state.firstName}
-        onChange={this.handleFirstName}
-      />
+        onChange={this.handleFirstName}>
+          <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>First Name</label><br/>
+          <input placeholder='First Name'></input>
+        </Form.Field>
+      
       <Form.Field
-        className= 'text-area'
         id='form-input-control-last-name'
-        control={Input}
-        label='Last name'
-        placeholder='Last name'
         value={this.state.lastName}
-        onChange={this.handleLastName}
-      />
+        onChange={this.handleLastName}>
+        <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>Last Name</label><br/>
+        <input placeholder='Last Name'></input>
+      </Form.Field> 
     </Form.Group>
     <Form.Field
       id='form-textarea-control-opinion'
       control={TextArea}
-      label='Message'
       placeholder='Message'
       value={this.state.message}
-      onChange={this.handleMessage}
-    />
+      onChange={this.handleMessage}/>
     <Form.Field
       id='form-input-control-error-email'
-      control={Input}
-      label='Email'
-      placeholder='example@myexample.com'
       value={this.state.email}
-      onChange={this.handleEmail}
-    />
+      onChange={this.handleEmail}>
+        <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>Email</label><br/>
+        <input placeholder='example@myexample.com'></input>
+      </Form.Field>
      <Form.Field
       className= 'text-area'
-      control={Input}
-      label='Phone Number'
-      placeholder='+1 XXX XXX XXXX'
       value={this.state.phoneNumber}
-      onChange={this.handlePhoneNumber}
-      />
+      onChange={this.handlePhoneNumber}>
+        <label style={{color:'white', fontSize:'20px', fontFamily:'Palatino, serif'}}>Phone Number</label><br/>
+        <input placeholder='+1 XXX XXX XXXX'></input>
+      </Form.Field>
       <div>
     <Button
       id='form-button-control-public'
       content='Submit'
-      color='green'
+      color='white'
     />
     </div>
   </Form>

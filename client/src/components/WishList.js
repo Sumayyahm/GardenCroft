@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { List, Image, Container, Header, Button } from 'semantic-ui-react';
+import { Table, List, Image, Container, Header, Button, Icon } from 'semantic-ui-react';
 import _ from 'lodash';
 
 function WishList() {
@@ -31,41 +31,63 @@ function WishList() {
 
       if(wishListState.length > 0) {
          return(
+                    <div style={{backgroundColor:'white'}}>
+                        <br/><br/><br/>
                     <Container>
                         <br/><br/><br/>
-                        <Header size='huge' icon textAlign='center'>My WishList</Header>
-                        <List relaxed='very'>
-                            {wishListState.map(item => {
-                                return (
-                                    <List.Item style={{marginLeft: '40%'}}>
-                                        <Image avatar src={item.image} />
-                                        <List.Content>
-                                        <List.Header size='large'>{item.name}</List.Header>
-                                        <List.Description><h3>{item.type}</h3></List.Description>
-                                        </List.Content>
-                                        <Button
-                                        onClick={() => removeFromWishList(item)} 
-                                        color='red'
-                                        >Remove from wishlist</Button>
-                                    </List.Item>
-                                )
-                            })}
-                        </List>
-                        <Button
+                        <Icon name='heart outline' size='huge' style={{width:'100%'}}/><br/>
+                        <Header size='huge'textAlign='center'>My WishList</Header>
+                        <Button 
+                            style={{
+                                width: '20%',
+                                marginLeft: '40%',
+                                marginRight: '30%'
+                            }}
                             onClick={() =>clearWishList()} 
-                            color='orange'
+                            color='green'
+                            centered
                             >Clear wishlist</Button>
                         <br/><br/><br/>
+                        <Table>
+                            {wishListState.map(item => {
+                                return (
+                                    
+                                    <Table.Row>
+                                        <Table.Cell><Image src={item.image} size='small' /></Table.Cell>
+                                        <Table.Cell>
+                                        <List.Header size='large'><h3>{item.name}</h3></List.Header>
+                                        </Table.Cell>
+                                        <Table.Cell>
+                                        <List.Description><h4>{item.type}</h4></List.Description>
+                                        </Table.Cell>
+                                        <Table.Cell>
+                                       <Icon 
+                                        name='trash alternate' 
+                                        size='large'
+                                        fitted
+                                        link
+                                        onClick={() => removeFromWishList(item)}
+                                        />
+                                        </Table.Cell>
+                                        <br/><br/>
+                                    </Table.Row>
+                                    
+                                )
+                            })}
+                        </Table>
+                        <br/><br/><br/>
                     </Container>
+                    <br/><br/>
+                    </div>
             )
     }
     else
     {
       return (
-          <Container>
+          <div>
               <br/><br/><br/>
-          <Header size='huge' icon textAlign='center'>Wish List is Empty!</Header>
-          </Container>
+          <Header style={{color:'white', fontSize:'45px', fontFamily:'Palatino, serif'}} size='huge' icon textAlign='center'>Wish List is Empty!</Header>
+          </div>
       )
     }
 }

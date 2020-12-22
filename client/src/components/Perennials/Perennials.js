@@ -58,9 +58,9 @@ useEffect(() => {
 
 
     return (
-    <div> 
+    <div style={{backgroundColor:'white'}}> 
          <br/><br/>
-        <Header size='huge' icon textAlign='center' style={{color:'white', fontFamily:'Palatino', fontSize:'30px'}}>Perennials</Header>  
+        <Header size='huge' icon textAlign='center' style={{fontFamily:'Palatino', fontSize:'30px'}}>Perennials</Header>  
     <PlantList>
         {perennials.map(plant => {
             return (

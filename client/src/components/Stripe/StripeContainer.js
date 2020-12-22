@@ -14,7 +14,7 @@ const Stripe = () => {
   return (
     <div>
     <br></br><br></br><br></br>
-    <Container>
+    <Container style ={{backgroundColor:'white', paddingLeft:'30px'}}>
     <Elements stripe={stripeTestPromise}>
       <br></br><br></br>
       <CheckoutForm />

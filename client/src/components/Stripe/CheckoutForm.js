@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from 'axios';
-import { Form, Input, Button, Header, Modal } from 'semantic-ui-react';
+import { Form, Input, Button, Header, Modal, Container } from 'semantic-ui-react';
 import { CartContext } from "../../CartContext";
 
 function exampleReducer(state, action) {
@@ -101,39 +101,37 @@ export const CheckoutForm = () => {
 
   return (
     <div>
-      <Header>Your Total Amount is {amount/100} </Header>
+      <Container style={{paddingBotton:'25px'}}>
+      <Header style={{fontFamily:'Palatino, serif', fontSize:'23px'}}>Your Total Amount is {amount/100} </Header>
     <Form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
       <Form.Group widths='equal'>
       <Form.Field
         className= 'text-area'
         id='form-input-control-first-name'
-        control={Input}
-        label='First name'
-        placeholder='First name'
         value={firstName}
-        onChange={handleFirstName}
-      />
+        onChange={handleFirstName}>
+          <label  style={{fontFamily:'Palatino, serif'}}>First Name</label>
+          <input placeholder='First Name'/>
+        </Form.Field>
       <Form.Field
         className= 'text-area'
         id='form-input-control-last-name'
-        control={Input}
-        label='Last name'
-        placeholder='Last name'
         value={lastName}
-        onChange={handleLastName}
-      />
+        onChange={handleLastName}>
+          <label  style={{fontFamily:'Palatino, serif'}}>Last Name</label>
+          <input placeholder='Last Name'/>
+        </Form.Field>
     </Form.Group>
     <Form.Field
       id='form-input-control-error-email'
-      control={Input}
-      label='Email'
-      placeholder='example@myexample.com'
       value={email}
-      onChange={handleEmail}
-    />
+      onChange={handleEmail}>
+        <label  style={{fontFamily:'Palatino, serif'}}>Email</label>
+        <input placeholder='example@myexample.com'/>
+        </Form.Field>
       <CardElement />
       <br></br><br></br>
-      <Button color='green'>Pay</Button>
+      <Button color='black'>Pay</Button>
     </Form>
 
     <Modal
@@ -151,7 +149,8 @@ export const CheckoutForm = () => {
           </Button>
         </Modal.Actions>
       </Modal>
-   
+      </Container>
+      <br/><br/><br/>
     </div>
   );
 };

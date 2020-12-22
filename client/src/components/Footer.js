@@ -3,10 +3,10 @@ import { Sticky } from 'semantic-ui-react';
 
 const styles ={
     fontFamily: 'Palatino, serif',
-    backgroundColor: 'mintcream',
+    backgroundColor: 'black',
     paddingTop: '12px',
     textAlign: 'center',
-    color: 'green'
+    color: 'white'
 }
 
 function Footer() {

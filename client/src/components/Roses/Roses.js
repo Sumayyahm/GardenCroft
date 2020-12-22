@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { PlantList, PlantListItem } from "./PlantSort";
 import { CartContext } from "../../CartContext";
-import API from '../../utils/API'
+import API from '../../utils/API';
+import { Header } from 'semantic-ui-react';
 
 
 function Roses() {
@@ -57,8 +58,10 @@ useEffect(() => {
 
 
     return (
-    <div>   
-    <PlantList>
+    <div style={{backgroundColor:'white'}}> 
+      <br/><br/>
+       <Header size='huge' icon textAlign='center' style={{fontFamily:'Palatino', fontSize:'30px'}}>Rose Plants</Header>   
+        <PlantList>
         {roses.map(plant => {
             return (
                 <PlantListItem
